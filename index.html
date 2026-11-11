@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b12">
+  <meta name="description" content="A motion-focused interface experiment with an animated orbital hero and responsive dashboard cards.">
+  <title>Orbit — Motion Interface Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Orbit home"><span class="brand-mark">O</span><span>orbit<span class="brand-dot">.</span></span></a>
+    <nav class="nav-links" aria-label="Main navigation"><a class="active" href="#overview">Overview</a><a href="#activity">Activity</a><a href="#signals">Signals</a></nav>
+    <button class="icon-button" id="themeButton" aria-label="Toggle glow intensity" title="Toggle glow intensity"><span>✳</span></button>
+  </header>
+  <main class="shell" id="overview">
+    <section class="intro">
+      <div><p class="eyebrow"><span class="live-dot"></span> PERSONAL COMMAND CENTER</p><h1>Make space for<br><em>what matters.</em></h1><p class="intro-copy">A small interface experiment exploring motion, focus and useful signals in one calm workspace.</p><div class="intro-actions"><a class="primary-button" href="#activity">Explore activity <span>↗</span></a><span class="micro-note">DESIGNED TO FEEL ALIVE</span></div></div>
+      <div class="orbital" aria-label="Animated orbital illustration"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div><div class="core"><span>O</span></div><i class="planet planet-a"></i><i class="planet planet-b"></i><i class="planet planet-c"></i><span class="orbit-label label-a">FOCUS</span><span class="orbit-label label-b">FLOW</span></div>
+    </section>
+    <section class="metric-grid" id="signals" aria-label="Example dashboard metrics">
+      <article class="metric-card"><div class="card-top"><span>FOCUS SCORE</span><span class="metric-icon">◉</span></div><strong>84<span class="unit">/100</span></strong><div class="progress"><span style="width:84%"></span></div><small>+8.2% <b>vs. last week</b></small></article>
+      <article class="metric-card"><div class="card-top"><span>DEEP WORK</span><span class="metric-icon">⌁</span></div><strong>12.5<span class="unit">h</span></strong><div class="mini-bars" aria-label="Weekly deep work trend"><i style="height:32%"></i><i style="height:52%"></i><i style="height:42%"></i><i style="height:75%"></i><i style="height:61%"></i><i style="height:90%"></i><i style="height:70%"></i></div><small>THIS WEEK <b>7 day view</b></small></article>
+      <article class="metric-card"><div class="card-top"><span>ACTIVE GOALS</span><span class="metric-icon">⌖</span></div><strong>06</strong><div class="goal-dots"><i></i><i></i><i></i><i></i><i></i><i></i></div><small>2 completed <b>this month</b></small></article>
+    </section>
+    <section class="activity-section" id="activity">
+      <div class="section-heading"><div><p class="eyebrow">YOUR RECENT SIGNALS</p><h2>Activity <span>stream</span></h2></div><div class="filters" role="group" aria-label="Filter activity"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="focus">Focus</button><button class="filter" data-filter="build">Build</button></div></div>
+      <div class="activity-list" id="activityList">
+        <article class="activity-item" data-kind="focus"><span class="activity-symbol purple">◉</span><div><h3>Deep work session</h3><p>Product architecture · 1h 42m</p></div><time>09:40 AM</time><span class="activity-tag">FOCUS</span></article>
+        <article class="activity-item" data-kind="build"><span class="activity-symbol blue">⌘</span><div><h3>Shipped a new component</h3><p>Reusable navigation pattern · UI Kit</p></div><time>Yesterday</time><span class="activity-tag">BUILD</span></article>
+        <article class="activity-item" data-kind="focus"><span class="activity-symbol green">✳</span><div><h3>Learning block completed</h3><p>TypeScript patterns · 45 minutes</p></div><time>Yesterday</time><span class="activity-tag">FOCUS</span></article>
+      </div>
+    </section>
+    <footer><span>ORBIT INTERFACE STUDY</span><span>DESIGNED & BUILT WITH CARE <b>✳</b></span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
